@@ -37,3 +37,22 @@ function decryptText(inputText) {
     }
     return inputText;
 }
+
+function handleEncryption(event) {
+    event.preventDefault();
+    const inputText = document.getElementById("inputText").value.trim();
+    const result = encryptText(inputText);
+    if (result) { 
+        showResult(result);
+    }
+}
+
+function handleDecryption(event) {
+    event.preventDefault();
+    const inputText = document.getElementById("inputText").value.trim();
+    const result = decryptText(inputText);
+    if (result) { 
+        showResult(result);
+    }
+}
+
