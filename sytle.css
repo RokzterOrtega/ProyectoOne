@@ -27,8 +27,6 @@ body{
     font-family: var(--font-family);
     margin: 0;
     height: 100vh;
-    /* -ms-overflow-style: none; */
-    /* scrollbar-width: none; */
 }
 
 h1{
@@ -51,7 +49,6 @@ h2{
 
 header{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     height: 12vh;
     margin-bottom: 10px;
@@ -92,6 +89,7 @@ footer{
     height: 100%;
 }
 
+/*se agrega un atributo a los elementos con el estatus de active*/
 .text-input,
 .text-input:active{
     position: relative;
@@ -218,6 +216,7 @@ footer{
 }
 .output-section:hover{
     box-shadow: 0 0 30px rgba(10, 56, 113, 0.3);
+    /* estatus cuando le pasas el cursor por encima*/
 }
 
 @media (max-width: 768px){
