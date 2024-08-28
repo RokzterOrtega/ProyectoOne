@@ -84,3 +84,5 @@ function copyToClipboard() {
     navigator.clipboard.writeText(result);
     window.alert("copiado al portapapeles");
 }
+
+/**se finaliza el codigo js */
