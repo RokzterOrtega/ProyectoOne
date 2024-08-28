@@ -56,10 +56,17 @@ function handleDecryption(event) {
         showResult(result);
     }
 }
-/* funcion para mostrar */
+/* funcion para mostrar el encriptado */
 function showResult(result) {
     const outputContainer = document.getElementById("outputContainer");
     outputContainer.innerHTML = `<p>${result}</p>`;
     showCopyButton();
 }
 
+/** funcion de muestreo de error */
+function showErrorAlert() {
+    alert("El texto tiene caracteres no permitidos... \n" +
+        "Únicamente se pueden introducir letras minúsculas... \n" +
+        "No se permiten mayúsculas, acentos, números y otros caracteres..."
+    );
+}
