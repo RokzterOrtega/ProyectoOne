@@ -1,3 +1,4 @@
+/* funcion de encriptamiento */
 function encryptText(inputText) {
     console.log("Input text before validation: ", inputText);
     if (!/^[a-z\s]+$/.test(inputText) || inputText.trim() === '') {
@@ -15,7 +16,7 @@ function encryptText(inputText) {
 
     return inputText.replace(/[aeiou]/g, match => conversions[match]);
 }
-
+/* funcion de desencriptamiento */
 function decryptText(inputText) {
     console.log("Input text before validation: ", inputText);
     if (!/^[a-z\s]+$/.test(inputText) || inputText.trim() === '') {
@@ -37,7 +38,7 @@ function decryptText(inputText) {
     }
     return inputText;
 }
-
+/* evento de encriptamiento*/ 
 function handleEncryption(event) {
     event.preventDefault();
     const inputText = document.getElementById("inputText").value.trim();
@@ -46,7 +47,7 @@ function handleEncryption(event) {
         showResult(result);
     }
 }
-
+/* evento de desencriptamiento  */
 function handleDecryption(event) {
     event.preventDefault();
     const inputText = document.getElementById("inputText").value.trim();
@@ -54,5 +55,11 @@ function handleDecryption(event) {
     if (result) { 
         showResult(result);
     }
+}
+/* funcion para mostrar */
+function showResult(result) {
+    const outputContainer = document.getElementById("outputContainer");
+    outputContainer.innerHTML = `<p>${result}</p>`;
+    showCopyButton();
 }
 
