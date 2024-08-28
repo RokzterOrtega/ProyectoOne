@@ -45,6 +45,7 @@ function handleEncryption(event) {
     const result = encryptText(inputText);
     if (result) { 
         showResult(result);
+        alert("El texto fue encriptado con exito");
     }
 }
 /* evento de desencriptamiento  */
@@ -54,6 +55,7 @@ function handleDecryption(event) {
     const result = decryptText(inputText);
     if (result) { 
         showResult(result);
+        alert("El texto fue desencriptado con exito");
     }
 }
 /* funcion para mostrar el encriptado */
@@ -61,6 +63,7 @@ function showResult(result) {
     const outputContainer = document.getElementById("outputContainer");
     outputContainer.innerHTML = `<p>${result}</p>`;
     showCopyButton();
+
 }
 
 /** funcion de muestreo de error */
@@ -69,4 +72,15 @@ function showErrorAlert() {
         "Únicamente se pueden introducir letras minúsculas... \n" +
         "No se permiten mayúsculas, acentos, números y otros caracteres..."
     );
+}
+/** funcion de boton de copiado */
+function showCopyButton() {
+    const copyButton = document.getElementById("copyButton");
+    copyButton.style.display = "block";
+}
+/** funcion de copiar al portapapeles */
+function copyToClipboard() {
+    const result = document.getElementById("outputContainer").textContent;
+    navigator.clipboard.writeText(result);
+    window.alert("copiado al portapapeles");
 }
