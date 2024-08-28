@@ -12,3 +12,6 @@ function encryptText(inputText) {
         o: "ober",
         u: "ufat"
     };
+
+    return inputText.replace(/[aeiou]/g, match => conversions[match]);
+}
